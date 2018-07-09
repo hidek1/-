@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var TextField: UITextField!
     
@@ -25,11 +25,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var docRef: DocumentReference!
     var ken: String = ""
     let userDefaults = UserDefaults.standard
+    var sDate:String = ""
+    
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // background image
+        let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        bg.image = UIImage(named: "sky.png")
+        bg.layer.zPosition = -1
+        bg.backgroundColor = UIColor.white
+        self.view.addSubview(bg)
+        TextField.delegate = self
+        //現在の日付を取得
+        let date:Date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy_MM"
+        sDate = format.string(from: date)
+        print(sDate)
         PickerView.delegate = self
         PickerView.dataSource = self
         ken = todouhuken[0]
@@ -53,15 +68,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         ken = todouhuken[row]
         
     }
+    func textFieldShouldReturn(_ TextField: UITextField) -> Bool{
+        // キーボードを閉じる
+        TextField.resignFirstResponder()
+        return true
+    }
 
     @IBAction func add(_ sender: Any) {
         guard let Text = TextField.text, !Text.isEmpty else { return }
         var ref: DocumentReference? = nil
         let db = Firestore.firestore()
-        ref = db.collection("users").addDocument(data: [
+        ref = db.collection("users\(self.sDate)").addDocument(data: [
             "name": Text,
             "live": ken,
-            "tapCount": 0,
+            "tapCount" : 0,
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -72,6 +92,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         userDefaults.set(Text, forKey: "name")
         userDefaults.set(ken, forKey: "live")
         userDefaults.set(ref!.documentID, forKey: "ID")
+        userDefaults.set(sDate, forKey: "date")
+//        userDefaults.set("1", forKey: "date")
 
         self.performSegue(withIdentifier: "toSecond", sender: nil)
 
@@ -83,5 +105,41 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         
     }
+}
+private var maxLengths = [UITextField: Int]()
+
+extension UITextField {
+    
+    @IBInspectable var maxLength: Int {
+        get {
+            guard let length = maxLengths[self] else {
+                return Int.max
+            }
+            
+            return length
+        }
+        set {
+            maxLengths[self] = newValue
+            addTarget(self, action: #selector(limitLength), for: .editingChanged)
+        }
+    }
+    
+    @objc func limitLength(textField: UITextField) {
+        guard let prospectiveText = textField.text, prospectiveText.count > maxLength else {
+            return
+        }
+        
+        let selection = selectedTextRange
+        let maxCharIndex = prospectiveText.index(prospectiveText.startIndex, offsetBy: maxLength)
+        
+        #if swift(>=4.0)
+        text = String(prospectiveText[..<maxCharIndex])
+        #else
+        text = prospectiveText.substring(to: maxCharIndex)
+        #endif
+        
+        selectedTextRange = selection
+    }
+    
 }
 

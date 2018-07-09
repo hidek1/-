@@ -13,6 +13,9 @@
 		7101CAD320E35F2B00C21587 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7101CAD220E35F2B00C21587 /* FirebaseFirestore.framework */; };
 		7101CAD520E35F3500C21587 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7101CAD420E35F3500C21587 /* FirebaseCore.framework */; };
 		7101CAD720E4565900C21587 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101CAD620E4565900C21587 /* mainViewController.swift */; };
+		71465EC720E9BE2000807505 /* 名字くん.png in Resources */ = {isa = PBXBuildFile; fileRef = 71465EC620E9BE2000807505 /* 名字くん.png */; };
+		71465ECB20EA0B8B00807505 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71465ECA20EA0B8B00807505 /* SecondViewController.swift */; };
+		71465ECD20EB90BB00807505 /* 吹き出し.png in Resources */ = {isa = PBXBuildFile; fileRef = 71465ECC20EB90BA00807505 /* 吹き出し.png */; };
 		71BA17FD10B5C1E9B91B843C /* Pods_____UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF50DC2BB05481CC3B80472 /* Pods_____UITests.framework */; };
 		71C01FBF20D92DD3001B7020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FBE20D92DD3001B7020 /* AppDelegate.swift */; };
 		71C01FC120D92DD3001B7020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FC020D92DD3001B7020 /* ViewController.swift */; };
@@ -21,6 +24,11 @@
 		71C01FC920D92DD5001B7020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C01FC720D92DD5001B7020 /* LaunchScreen.storyboard */; };
 		71C01FD420D92DD5001B7020 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FD320D92DD5001B7020 /* ____Tests.swift */; };
 		71C01FDF20D92DD5001B7020 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FDE20D92DD5001B7020 /* ____UITests.swift */; };
+		71DA72DF20ECC9E100BB2924 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72DE20ECC9E000BB2924 /* sky.png */; };
+		71DA72E120ECD31900BB2924 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA72E020ECD31900BB2924 /* ThirdViewController.swift */; };
+		71DA72E920EE072500BB2924 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72E820EE072500BB2924 /* share.png */; };
+		71DA72EC20EF480300BB2924 /* mikiyu-newpenji-p.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72EA20EF466F00BB2924 /* mikiyu-newpenji-p.ttf */; };
+		71DA72ED20EF480E00BB2924 /* mikiyu-mokomori-b.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72EB20EF468000BB2924 /* mikiyu-mokomori-b.ttf */; };
 		71E10DC320E0B338004B8972 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71E10DC220E0B338004B8972 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +61,9 @@
 		7101CAD220E35F2B00C21587 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7101CAD420E35F3500C21587 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7101CAD620E4565900C21587 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		71465EC620E9BE2000807505 /* 名字くん.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "名字くん.png"; sourceTree = "<group>"; };
+		71465ECA20EA0B8B00807505 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		71465ECC20EB90BA00807505 /* 吹き出し.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "吹き出し.png"; path = "../../../吹き出し.png"; sourceTree = "<group>"; };
 		71C01FBB20D92DD3001B7020 /* 名字さん.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "名字さん.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C01FBE20D92DD3001B7020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C01FC020D92DD3001B7020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +77,11 @@
 		71C01FDA20D92DD5001B7020 /* 名字さんUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "名字さんUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C01FDE20D92DD5001B7020 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		71C01FE020D92DD5001B7020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71DA72DE20ECC9E000BB2924 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
+		71DA72E020ECD31900BB2924 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		71DA72E820EE072500BB2924 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		71DA72EA20EF466F00BB2924 /* mikiyu-newpenji-p.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mikiyu-newpenji-p.ttf"; sourceTree = "<group>"; };
+		71DA72EB20EF468000BB2924 /* mikiyu-mokomori-b.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mikiyu-mokomori-b.ttf"; sourceTree = "<group>"; };
 		71E10DC220E0B338004B8972 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		73494B789DA5787C0B29B3B5 /* Pods-名字さんTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-名字さんTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-名字さんTests/Pods-名字さんTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD110FFD2BC4FCAB69B5ECE /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,10 +148,18 @@
 			children = (
 				71C01FBE20D92DD3001B7020 /* AppDelegate.swift */,
 				71C01FC020D92DD3001B7020 /* ViewController.swift */,
-				71C01FC220D92DD3001B7020 /* Main.storyboard */,
 				7101CAD620E4565900C21587 /* mainViewController.swift */,
+				71465ECA20EA0B8B00807505 /* SecondViewController.swift */,
+				71DA72E020ECD31900BB2924 /* ThirdViewController.swift */,
+				71C01FC220D92DD3001B7020 /* Main.storyboard */,
+				71DA72EA20EF466F00BB2924 /* mikiyu-newpenji-p.ttf */,
+				71DA72EB20EF468000BB2924 /* mikiyu-mokomori-b.ttf */,
+				71DA72DE20ECC9E000BB2924 /* sky.png */,
+				71465EC620E9BE2000807505 /* 名字くん.png */,
+				71465ECC20EB90BA00807505 /* 吹き出し.png */,
 				71C01FC520D92DD5001B7020 /* Assets.xcassets */,
 				71C01FC720D92DD5001B7020 /* LaunchScreen.storyboard */,
+				71DA72E820EE072500BB2924 /* share.png */,
 				7101CACC20E270D800C21587 /* MapJp_Sample1.png */,
 				71C01FCA20D92DD5001B7020 /* Info.plist */,
 				71E10DC220E0B338004B8972 /* GoogleService-Info.plist */,
@@ -298,11 +322,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DA72ED20EF480E00BB2924 /* mikiyu-mokomori-b.ttf in Resources */,
+				71DA72EC20EF480300BB2924 /* mikiyu-newpenji-p.ttf in Resources */,
 				7101CACD20E270D800C21587 /* MapJp_Sample1.png in Resources */,
+				71DA72DF20ECC9E100BB2924 /* sky.png in Resources */,
 				71C01FC920D92DD5001B7020 /* LaunchScreen.storyboard in Resources */,
+				71DA72E920EE072500BB2924 /* share.png in Resources */,
+				71465ECD20EB90BB00807505 /* 吹き出し.png in Resources */,
 				71E10DC320E0B338004B8972 /* GoogleService-Info.plist in Resources */,
 				71C01FC620D92DD5001B7020 /* Assets.xcassets in Resources */,
 				71C01FC420D92DD3001B7020 /* Main.storyboard in Resources */,
+				71465EC720E9BE2000807505 /* 名字くん.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +448,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71465ECB20EA0B8B00807505 /* SecondViewController.swift in Sources */,
 				71C01FC120D92DD3001B7020 /* ViewController.swift in Sources */,
+				71DA72E120ECD31900BB2924 /* ThirdViewController.swift in Sources */,
 				71C01FBF20D92DD3001B7020 /* AppDelegate.swift in Sources */,
 				7101CAD720E4565900C21587 /* mainViewController.swift in Sources */,
 			);
@@ -595,7 +627,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6L5JVQU52Y;
 				INFOPLIST_FILE = "名字さん/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,7 +647,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6L5JVQU52Y;
 				INFOPLIST_FILE = "名字さん/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
