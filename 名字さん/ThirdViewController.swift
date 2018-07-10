@@ -40,12 +40,14 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "SampleCell")
         
         // セルに表示する値を設定する
         let rankname = self.himaName.map{ $0.key}
         let rankscore = self.himaName.map{ $0.value}
-        cell.textLabel!.text = "\(indexPath.row + 1)  \(rankname[indexPath.row])さん  \(rankscore[indexPath.row])pt"
+        cell.textLabel!.text = "\(indexPath.row + 1)  \(rankname[indexPath.row])さん"
+        cell.detailTextLabel?.text = "\(rankscore[indexPath.row])pt"
+        cell.detailTextLabel?.textColor = UIColor.black
         cell.textLabel!.font = UIFont(name: "Mikiyu Font Mokomori-B", size: 50)
         cell.backgroundColor = .clear
         return cell

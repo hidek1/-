@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AVFoundation
 
 class mainViewController: UIViewController {
     @IBOutlet weak var Label1: UILabel!
@@ -33,7 +34,7 @@ class mainViewController: UIViewController {
     var counting = 0
     var sDate:String = ""
     var himaName:[(key:String, value: Int)] = []
-
+    var audioPlayerInstance : AVAudioPlayer! = nil  // 再生するサウンドのインスタンス
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,19 @@ class mainViewController: UIViewController {
 //        let domain = Bundle.main.bundleIdentifier!
 //        UserDefaults.standard.removePersistentDomain(forName: domain)
 //        UserDefaults.standard.synchronize()
+        
+        // サウンドファイルのパスを生成
+        let soundFilePath = Bundle.main.path(forResource: "ビヨォン", ofType: "mp3")!
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            print("AVAudioPlayerインスタンス作成失敗")
+        }
+        // バッファに保持していつでも再生できるようにする
+        audioPlayerInstance.prepareToPlay()
+        
         // background image
         let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         bg.image = UIImage(named: "sky.png")
@@ -176,7 +190,10 @@ class mainViewController: UIViewController {
         self.present(activityVc, animated: true, completion: nil)
     }
     @IBAction func tapButton(_ sender: Any) {
-    count = count + 1
+        // 連打した時に連続して音がなるようにする
+        audioPlayerInstance.currentTime = 0         // 再生位置を先頭(0)に戻してから
+        audioPlayerInstance.play()                  // 再生する
+        count = count + 1
         Label4.text = "あなたのスコア \(count)"
         userDefaults.set(count, forKey: "count")
         let db = Firestore.firestore()
