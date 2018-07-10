@@ -17,6 +17,8 @@
 		71465ECB20EA0B8B00807505 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71465ECA20EA0B8B00807505 /* SecondViewController.swift */; };
 		71465ECD20EB90BB00807505 /* 吹き出し.png in Resources */ = {isa = PBXBuildFile; fileRef = 71465ECC20EB90BA00807505 /* 吹き出し.png */; };
 		7196031F20F318B3000A6082 /* ビヨォン.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7196031E20F318B2000A6082 /* ビヨォン.mp3 */; };
+		7196032320F47E8A000A6082 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7196032220F47E8A000A6082 /* infoViewController.swift */; };
+		7196032720F483EA000A6082 /* TAKUMIYFONT_P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7196032620F483D8000A6082 /* TAKUMIYFONT_P.ttf */; };
 		71BA17FD10B5C1E9B91B843C /* Pods_____UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF50DC2BB05481CC3B80472 /* Pods_____UITests.framework */; };
 		71C01FBF20D92DD3001B7020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FBE20D92DD3001B7020 /* AppDelegate.swift */; };
 		71C01FC120D92DD3001B7020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FC020D92DD3001B7020 /* ViewController.swift */; };
@@ -28,8 +30,6 @@
 		71DA72DF20ECC9E100BB2924 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72DE20ECC9E000BB2924 /* sky.png */; };
 		71DA72E120ECD31900BB2924 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA72E020ECD31900BB2924 /* ThirdViewController.swift */; };
 		71DA72E920EE072500BB2924 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72E820EE072500BB2924 /* share.png */; };
-		71DA72EC20EF480300BB2924 /* mikiyu-newpenji-p.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72EA20EF466F00BB2924 /* mikiyu-newpenji-p.ttf */; };
-		71DA72ED20EF480E00BB2924 /* mikiyu-mokomori-b.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72EB20EF468000BB2924 /* mikiyu-mokomori-b.ttf */; };
 		71E10DC320E0B338004B8972 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71E10DC220E0B338004B8972 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +66,8 @@
 		71465ECA20EA0B8B00807505 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		71465ECC20EB90BA00807505 /* 吹き出し.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "吹き出し.png"; path = "../../../吹き出し.png"; sourceTree = "<group>"; };
 		7196031E20F318B2000A6082 /* ビヨォン.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ビヨォン.mp3"; sourceTree = "<group>"; };
+		7196032220F47E8A000A6082 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
+		7196032620F483D8000A6082 /* TAKUMIYFONT_P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TAKUMIYFONT_P.ttf; sourceTree = "<group>"; };
 		71C01FBB20D92DD3001B7020 /* 名字さん.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "名字さん.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C01FBE20D92DD3001B7020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C01FC020D92DD3001B7020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,8 +84,6 @@
 		71DA72DE20ECC9E000BB2924 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
 		71DA72E020ECD31900BB2924 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		71DA72E820EE072500BB2924 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
-		71DA72EA20EF466F00BB2924 /* mikiyu-newpenji-p.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mikiyu-newpenji-p.ttf"; sourceTree = "<group>"; };
-		71DA72EB20EF468000BB2924 /* mikiyu-mokomori-b.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mikiyu-mokomori-b.ttf"; sourceTree = "<group>"; };
 		71E10DC220E0B338004B8972 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		73494B789DA5787C0B29B3B5 /* Pods-名字さんTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-名字さんTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-名字さんTests/Pods-名字さんTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD110FFD2BC4FCAB69B5ECE /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,8 +155,8 @@
 				71DA72E020ECD31900BB2924 /* ThirdViewController.swift */,
 				7196031E20F318B2000A6082 /* ビヨォン.mp3 */,
 				71C01FC220D92DD3001B7020 /* Main.storyboard */,
-				71DA72EA20EF466F00BB2924 /* mikiyu-newpenji-p.ttf */,
-				71DA72EB20EF468000BB2924 /* mikiyu-mokomori-b.ttf */,
+				7196032220F47E8A000A6082 /* infoViewController.swift */,
+				7196032620F483D8000A6082 /* TAKUMIYFONT_P.ttf */,
 				71DA72DE20ECC9E000BB2924 /* sky.png */,
 				71465EC620E9BE2000807505 /* 名字くん.png */,
 				71465ECC20EB90BA00807505 /* 吹き出し.png */,
@@ -325,8 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71DA72ED20EF480E00BB2924 /* mikiyu-mokomori-b.ttf in Resources */,
-				71DA72EC20EF480300BB2924 /* mikiyu-newpenji-p.ttf in Resources */,
+				7196032720F483EA000A6082 /* TAKUMIYFONT_P.ttf in Resources */,
 				7101CACD20E270D800C21587 /* MapJp_Sample1.png in Resources */,
 				71DA72DF20ECC9E100BB2924 /* sky.png in Resources */,
 				7196031F20F318B3000A6082 /* ビヨォン.mp3 in Resources */,
@@ -452,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7196032320F47E8A000A6082 /* infoViewController.swift in Sources */,
 				71465ECB20EA0B8B00807505 /* SecondViewController.swift in Sources */,
 				71C01FC120D92DD3001B7020 /* ViewController.swift in Sources */,
 				71DA72E120ECD31900BB2924 /* ThirdViewController.swift in Sources */,

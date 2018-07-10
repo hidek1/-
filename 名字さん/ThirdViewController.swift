@@ -48,7 +48,8 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel!.text = "\(indexPath.row + 1)  \(rankname[indexPath.row])さん"
         cell.detailTextLabel?.text = "\(rankscore[indexPath.row])pt"
         cell.detailTextLabel?.textColor = UIColor.black
-        cell.textLabel!.font = UIFont(name: "Mikiyu Font Mokomori-B", size: 50)
+        cell.textLabel!.font = UIFont(name: "takumi-yutorifont-P", size: 21)
+        cell.detailTextLabel?.font = UIFont(name: "takumi-yutorifont-P", size: 21)
         cell.backgroundColor = .clear
         return cell
     }
