@@ -17,7 +17,6 @@ class mainViewController: UIViewController {
     @IBOutlet weak var Label3: UILabel!
     @IBOutlet weak var Label4: UILabel!
     @IBOutlet weak var TapButton: UIButton!
-    @IBOutlet weak var hukidashi: UIStackView!
     
     @IBOutlet weak var share: UIImageView!
     @IBOutlet weak var coment: UILabel!
@@ -77,7 +76,7 @@ class mainViewController: UIViewController {
         print(sDate)
         TapButton.layer.cornerRadius = TapButton.bounds.width/2
         TapButton.titleLabel?.numberOfLines = 2
-        TapButton.setTitle("連続で\nタップする！", for: .normal)
+        TapButton.setTitle("", for: .normal)
         TapButton.titleLabel?.textAlignment = NSTextAlignment.center
         userName = userDefaults.object(forKey: "name") as! String
         text = userDefaults.object(forKey: "name") as! String
@@ -185,6 +184,7 @@ class mainViewController: UIViewController {
         
         // UIActivityViewControllerをインスタンス化
         let activityVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        activityVc.popoverPresentationController?.sourceView = self.view
         
         // UIAcitivityViewControllerを表示
         self.present(activityVc, animated: true, completion: nil)

@@ -11,22 +11,12 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>FirebaseCore 2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>15</integer>
-		</dict>
 		<key>FirebaseCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
-		</dict>
-		<key>FirebaseFirestore 2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
 		</dict>
 		<key>FirebaseFirestore.xcscheme</key>
 		<dict>
@@ -121,17 +111,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1BC96BED8E82CC4984352C8705A764D8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>95C14328C1EF165F06ADA3FF997FDC0A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

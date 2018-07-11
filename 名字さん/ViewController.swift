@@ -13,6 +13,8 @@ import FirebaseFirestore
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var TextField: UITextField!
+   
+    
     
     @IBOutlet weak var PickerView: UIPickerView!
     var todouhuken = ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県",
@@ -68,6 +70,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         ken = todouhuken[row]
         
     }
+
     func textFieldShouldReturn(_ TextField: UITextField) -> Bool{
         // キーボードを閉じる
         TextField.resignFirstResponder()
@@ -115,7 +118,6 @@ extension UITextField {
             guard let length = maxLengths[self] else {
                 return Int.max
             }
-            
             return length
         }
         set {
@@ -128,10 +130,8 @@ extension UITextField {
         guard let prospectiveText = textField.text, prospectiveText.count > maxLength else {
             return
         }
-        
         let selection = selectedTextRange
         let maxCharIndex = prospectiveText.index(prospectiveText.startIndex, offsetBy: maxLength)
-        
         #if swift(>=4.0)
         text = String(prospectiveText[..<maxCharIndex])
         #else

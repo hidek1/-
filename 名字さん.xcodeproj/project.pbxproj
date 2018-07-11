@@ -10,8 +10,6 @@
 		6FE2A75E948AF55AC3A2C9D3 /* Pods_____Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD110FFD2BC4FCAB69B5ECE /* Pods_____Tests.framework */; };
 		7101CACB20E2053000C21587 /* Pods_名字さん.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7101CACA20E2053000C21587 /* Pods_名字さん.framework */; };
 		7101CACD20E270D800C21587 /* MapJp_Sample1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7101CACC20E270D800C21587 /* MapJp_Sample1.png */; };
-		7101CAD320E35F2B00C21587 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7101CAD220E35F2B00C21587 /* FirebaseFirestore.framework */; };
-		7101CAD520E35F3500C21587 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7101CAD420E35F3500C21587 /* FirebaseCore.framework */; };
 		7101CAD720E4565900C21587 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101CAD620E4565900C21587 /* mainViewController.swift */; };
 		71465EC720E9BE2000807505 /* 名字くん.png in Resources */ = {isa = PBXBuildFile; fileRef = 71465EC620E9BE2000807505 /* 名字くん.png */; };
 		71465ECB20EA0B8B00807505 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71465ECA20EA0B8B00807505 /* SecondViewController.swift */; };
@@ -19,6 +17,8 @@
 		7196032320F47E8A000A6082 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7196032220F47E8A000A6082 /* infoViewController.swift */; };
 		7196032720F483EA000A6082 /* TAKUMIYFONT_P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7196032620F483D8000A6082 /* TAKUMIYFONT_P.ttf */; };
 		71B08D2420F4C620007CCA0C /* 吹き出し.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B08D2320F4C620007CCA0C /* 吹き出し.png */; };
+		71B08D2620F5E362007CCA0C /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B08D2520F5E362007CCA0C /* FirebaseCore.framework */; };
+		71B08D2820F5E362007CCA0C /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B08D2720F5E362007CCA0C /* FirebaseFirestore.framework */; };
 		71BA17FD10B5C1E9B91B843C /* Pods_____UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF50DC2BB05481CC3B80472 /* Pods_____UITests.framework */; };
 		71C01FBF20D92DD3001B7020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FBE20D92DD3001B7020 /* AppDelegate.swift */; };
 		71C01FC120D92DD3001B7020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C01FC020D92DD3001B7020 /* ViewController.swift */; };
@@ -68,6 +68,8 @@
 		7196032220F47E8A000A6082 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		7196032620F483D8000A6082 /* TAKUMIYFONT_P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TAKUMIYFONT_P.ttf; sourceTree = "<group>"; };
 		71B08D2320F4C620007CCA0C /* 吹き出し.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "吹き出し.png"; sourceTree = "<group>"; };
+		71B08D2520F5E362007CCA0C /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71B08D2720F5E362007CCA0C /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C01FBB20D92DD3001B7020 /* 名字さん.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "名字さん.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C01FBE20D92DD3001B7020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C01FC020D92DD3001B7020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7101CAD520E35F3500C21587 /* FirebaseCore.framework in Frameworks */,
-				7101CAD320E35F2B00C21587 /* FirebaseFirestore.framework in Frameworks */,
+				71B08D2620F5E362007CCA0C /* FirebaseCore.framework in Frameworks */,
+				71B08D2820F5E362007CCA0C /* FirebaseFirestore.framework in Frameworks */,
 				7101CACB20E2053000C21587 /* Pods_名字さん.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +206,8 @@
 		F674138270D15E8AEAD324C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71B08D2520F5E362007CCA0C /* FirebaseCore.framework */,
+				71B08D2720F5E362007CCA0C /* FirebaseFirestore.framework */,
 				7101CAD420E35F3500C21587 /* FirebaseCore.framework */,
 				7101CAD220E35F2B00C21587 /* FirebaseFirestore.framework */,
 				7101CAD020E3568B00C21587 /* FirebaseCore.framework */,
