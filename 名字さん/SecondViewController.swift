@@ -65,7 +65,7 @@ class SecondViewController: UIViewController {
                     } else {
                         self.rank.append(0)
                     }
-                    print(self.rank[i])
+//                    print(self.rank[i])
                     if self.rank[i] == 1 {
                         self.rankcolor.append(UIColor.red)
                     } else if self.rank[i] == 2 {
@@ -82,7 +82,7 @@ class SecondViewController: UIViewController {
                         self.rankcolor.append(UIColor.green)
                     }
                 }
-                print(self.rankcolor)
+//                print(self.rankcolor)
                 self.setcolor()
             }
         }

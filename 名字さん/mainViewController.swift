@@ -37,7 +37,7 @@ class mainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
 //        UserDefaults削除
 //        let domain = Bundle.main.bundleIdentifier!
 //        UserDefaults.standard.removePersistentDomain(forName: domain)
@@ -56,9 +56,9 @@ class mainViewController: UIViewController {
         audioPlayerInstance.prepareToPlay()
         
         // background image
-        let bg = UIImageView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         bg.image = UIImage(named: "sky.png")
-        bg.layer.zPosition = 2
+        bg.layer.zPosition = -1
         bg.backgroundColor = UIColor.white
         self.view.addSubview(bg)
         self.share.isUserInteractionEnabled = true
