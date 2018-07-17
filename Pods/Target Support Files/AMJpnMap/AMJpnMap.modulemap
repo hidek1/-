@@ -1,0 +1,6 @@
+framework module AMJpnMap {
+  umbrella header "AMJpnMap-umbrella.h"
+
+  export *
+  module * { export * }
+}

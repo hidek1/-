@@ -8,6 +8,7 @@ target '名字さん' do
   # Pods for 名字さん
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
+pod 'AMJpnMap'
   target '名字さんTests' do
     inherit! :search_paths
     # Pods for testing

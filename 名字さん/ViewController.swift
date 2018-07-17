@@ -13,8 +13,8 @@ import FirebaseFirestore
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var TextField: UITextField!
-   
     
+    @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var PickerView: UIPickerView!
     var todouhuken = ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県",
@@ -34,6 +34,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.center = view.center
+        textView.backgroundColor = .clear
+        textView.font = UIFont.systemFont(ofSize: 17.0) // フォントの設定をする.
+        textView.textColor = .black // フォントの色の設定をする.
+        textView.textAlignment = .center
+        textView.dataDetectorTypes = .all // リンク、日付などを自動的に検出してリンクに変換する.
+        textView.isEditable = false // テキストを編集不可にする.
+        
+        let style = NSMutableParagraphStyle()
+        style.alignment = .center
+        let attributedString = NSMutableAttributedString(string: "プライパシーポリシーはこちら")
+        
+        attributedString.addAttributes([.foregroundColor: UIColor.black, .paragraphStyle: style, .font: UIFont.systemFont(ofSize: 17.0)], range: NSMakeRange(0, attributedString.length))
+        
+        let range = attributedString.mutableString.range(of: "こちら")
+        attributedString.setAttributes([.underlineStyle : NSUnderlineStyle.styleSingle.rawValue, .link: URL(string: "https://hidekazuyoshi.hatenablog.com/")!, .foregroundColor: UIColor.black, .paragraphStyle: style,], range: range)
+        
+        textView.attributedText = attributedString
+        
+        
         // background image
         let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         bg.image = UIImage(named: "sky.png")
@@ -102,6 +122,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

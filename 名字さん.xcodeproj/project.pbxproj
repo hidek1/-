@@ -31,6 +31,9 @@
 		71DA72E120ECD31900BB2924 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA72E020ECD31900BB2924 /* ThirdViewController.swift */; };
 		71DA72E920EE072500BB2924 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA72E820EE072500BB2924 /* share.png */; };
 		71E10DC320E0B338004B8972 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71E10DC220E0B338004B8972 /* GoogleService-Info.plist */; };
+		71E8853320F88C2500D56DC4 /* AMJpnMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E8853220F88C2500D56DC4 /* AMJpnMap.framework */; };
+		71E8853720F8AA2C00D56DC4 /* 色分け.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E8853620F8AA2C00D56DC4 /* 色分け.png */; };
+		71E8853920FAE7E900D56DC4 /* スクリーンショット 2018-07-15 9.51.46.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E8853820FAE7E900D56DC4 /* スクリーンショット 2018-07-15 9.51.46.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		71DA72E020ECD31900BB2924 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		71DA72E820EE072500BB2924 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		71E10DC220E0B338004B8972 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71E8853220F88C2500D56DC4 /* AMJpnMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AMJpnMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E8853620F8AA2C00D56DC4 /* 色分け.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "色分け.png"; sourceTree = "<group>"; };
+		71E8853820FAE7E900D56DC4 /* スクリーンショット 2018-07-15 9.51.46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2018-07-15 9.51.46.png"; sourceTree = "<group>"; };
 		73494B789DA5787C0B29B3B5 /* Pods-名字さんTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-名字さんTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-名字さんTests/Pods-名字さんTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD110FFD2BC4FCAB69B5ECE /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		979ABD19823CB1348EC5D10D /* Pods-名字さんUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-名字さんUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-名字さんUITests/Pods-名字さんUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E8853320F88C2500D56DC4 /* AMJpnMap.framework in Frameworks */,
 				71B08D2620F5E362007CCA0C /* FirebaseCore.framework in Frameworks */,
 				71B08D2820F5E362007CCA0C /* FirebaseFirestore.framework in Frameworks */,
 				7101CACB20E2053000C21587 /* Pods_名字さん.framework in Frameworks */,
@@ -166,6 +173,8 @@
 				71C01FC720D92DD5001B7020 /* LaunchScreen.storyboard */,
 				71DA72E820EE072500BB2924 /* share.png */,
 				7101CACC20E270D800C21587 /* MapJp_Sample1.png */,
+				71E8853620F8AA2C00D56DC4 /* 色分け.png */,
+				71E8853820FAE7E900D56DC4 /* スクリーンショット 2018-07-15 9.51.46.png */,
 				71C01FCA20D92DD5001B7020 /* Info.plist */,
 				71E10DC220E0B338004B8972 /* GoogleService-Info.plist */,
 			);
@@ -206,6 +215,7 @@
 		F674138270D15E8AEAD324C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71E8853220F88C2500D56DC4 /* AMJpnMap.framework */,
 				71B08D2520F5E362007CCA0C /* FirebaseCore.framework */,
 				71B08D2720F5E362007CCA0C /* FirebaseFirestore.framework */,
 				7101CAD420E35F3500C21587 /* FirebaseCore.framework */,
@@ -332,11 +342,13 @@
 				7196032720F483EA000A6082 /* TAKUMIYFONT_P.ttf in Resources */,
 				7101CACD20E270D800C21587 /* MapJp_Sample1.png in Resources */,
 				71B08D2420F4C620007CCA0C /* 吹き出し.png in Resources */,
+				71E8853720F8AA2C00D56DC4 /* 色分け.png in Resources */,
 				71DA72DF20ECC9E100BB2924 /* sky.png in Resources */,
 				7196031F20F318B3000A6082 /* ビヨォン.mp3 in Resources */,
 				71C01FC920D92DD5001B7020 /* LaunchScreen.storyboard in Resources */,
 				71DA72E920EE072500BB2924 /* share.png in Resources */,
 				71E10DC320E0B338004B8972 /* GoogleService-Info.plist in Resources */,
+				71E8853920FAE7E900D56DC4 /* スクリーンショット 2018-07-15 9.51.46.png in Resources */,
 				71C01FC620D92DD5001B7020 /* Assets.xcassets in Resources */,
 				71C01FC420D92DD3001B7020 /* Main.storyboard in Resources */,
 				71465EC720E9BE2000807505 /* 名字くん.png in Resources */,
@@ -403,6 +415,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-名字さん/Pods-名字さん-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMJpnMap/AMJpnMap.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -415,6 +428,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMJpnMap.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,34 +22,34 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="名字さん" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの名字を入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVB-f0-ZE0">
-                                <rect key="frame" x="295.5" y="59" width="177" height="20"/>
+                                <rect key="frame" x="71.5" y="59" width="177" height="20"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ1-ZI-uzJ">
-                                <rect key="frame" x="357" y="495" width="54" height="34"/>
-                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="22"/>
-                                <state key="normal" title="登録！"/>
+                                <rect key="frame" x="49" y="525" width="222" height="26"/>
+                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="14"/>
+                                <state key="normal" title="プライバシーポリシーに同意して登録！"/>
                                 <connections>
                                     <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UqM-8j-XzM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住んでいる県を選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTc-QS-sOa">
-                                <rect key="frame" x="296" y="187" width="176" height="20"/>
+                                <rect key="frame" x="72.5" y="187" width="175.5" height="20"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhK-yw-02P">
-                                <rect key="frame" x="0.0" y="240" width="768" height="216"/>
+                                <rect key="frame" x="0.0" y="240" width="320" height="216"/>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-M4-zo9">
-                                <rect key="frame" x="327.5" y="104" width="113" height="30"/>
+                                <rect key="frame" x="103.5" y="104" width="113" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="YMP-qp-TBs"/>
                                 </constraints>
@@ -62,15 +62,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LII-R3-vpI">
+                                <rect key="frame" x="40" y="471" width="240" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4xQ-49-Kqc"/>
+                                    <constraint firstAttribute="height" constant="39" id="7q5-SC-wIr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="dTc-QS-sOa" firstAttribute="top" secondItem="4Nj-M4-zo9" secondAttribute="bottom" constant="53" id="0Jg-6V-feC"/>
                             <constraint firstItem="4Nj-M4-zo9" firstAttribute="top" secondItem="VVB-f0-ZE0" secondAttribute="bottom" constant="25" id="Hpk-tz-pt8"/>
+                            <constraint firstItem="LII-R3-vpI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JcR-1p-ghk"/>
                             <constraint firstItem="VVB-f0-ZE0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="KHk-5s-yHC"/>
-                            <constraint firstItem="YQ1-ZI-uzJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SV6-Wr-lZ4"/>
+                            <constraint firstItem="YQ1-ZI-uzJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OOw-Vr-6PJ"/>
                             <constraint firstItem="YhK-yw-02P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="W3d-4F-1nR"/>
+                            <constraint firstItem="LII-R3-vpI" firstAttribute="top" secondItem="YhK-yw-02P" secondAttribute="bottom" constant="15" id="Xke-1G-A7f"/>
                             <constraint firstItem="dTc-QS-sOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zhr-Vh-9Fp"/>
-                            <constraint firstItem="YQ1-ZI-uzJ" firstAttribute="top" secondItem="YhK-yw-02P" secondAttribute="bottom" constant="39" id="b7I-yL-MhB"/>
+                            <constraint firstItem="YQ1-ZI-uzJ" firstAttribute="top" secondItem="LII-R3-vpI" secondAttribute="bottom" constant="15" id="khF-Fx-bmv"/>
                             <constraint firstItem="VVB-f0-ZE0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p5I-21-al8"/>
                             <constraint firstItem="YhK-yw-02P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vgS-05-HCq"/>
                             <constraint firstItem="YhK-yw-02P" firstAttribute="top" secondItem="dTc-QS-sOa" secondAttribute="bottom" constant="33" id="xTq-LX-bYh"/>
@@ -81,6 +93,7 @@
                     <connections>
                         <outlet property="PickerView" destination="YhK-yw-02P" id="OaT-fq-0am"/>
                         <outlet property="TextField" destination="4Nj-M4-zo9" id="Lpa-fE-quE"/>
+                        <outlet property="textView" destination="LII-R3-vpI" id="sxm-jD-AWM"/>
                         <segue destination="REp-GY-Oic" kind="presentation" identifier="toSecond" id="Esa-Bo-3PH"/>
                     </connections>
                 </viewController>
@@ -93,29 +106,29 @@
             <objects>
                 <viewController id="REp-GY-Oic" customClass="mainViewController" customModule="名字さん" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lGt-hx-yrq">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8m-jg-hcO">
-                                <rect key="frame" x="360" y="65" width="48" height="17"/>
+                                <rect key="frame" x="136" y="65" width="48.5" height="17"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgm-54-mHN">
-                                <rect key="frame" x="352.5" y="106" width="63" height="22"/>
+                                <rect key="frame" x="128.5" y="106" width="63" height="22"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjv-4i-TM2">
-                                <rect key="frame" x="358" y="149" width="52" height="18"/>
+                                <rect key="frame" x="134.5" y="149" width="51.5" height="18"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgq-jt-S0J">
-                                <rect key="frame" x="153.5" y="324" width="461" height="307"/>
+                                <rect key="frame" x="64" y="324" width="192" height="170.5"/>
                                 <state key="normal" title="タップする！" image="名字くん.png">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -124,7 +137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4U-iM-DnA">
-                                <rect key="frame" x="306.5" y="649" width="155" height="30"/>
+                                <rect key="frame" x="82.5" y="512.5" width="155" height="30"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="18"/>
                                 <state key="normal" title="県別のひまさを見る"/>
                                 <connections>
@@ -132,22 +145,22 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吹き出し.png" translatesAutoresizingMaskIntoConstraints="NO" id="uQH-Tw-Hun">
-                                <rect key="frame" x="336" y="195.5" width="199" height="164"/>
+                                <rect key="frame" x="112" y="195.5" width="199" height="164"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap me!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIa-qV-Cap">
-                                <rect key="frame" x="378" y="278" width="77.5" height="17"/>
+                                <rect key="frame" x="154" y="278" width="77.5" height="17"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Aj-Ac-uyN">
-                                <rect key="frame" x="361" y="260" width="43" height="15"/>
+                                <rect key="frame" x="137" y="260" width="43" height="15"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu5-Q1-jqz">
-                                <rect key="frame" x="343" y="616" width="82" height="30"/>
+                                <rect key="frame" x="119" y="479.5" width="82" height="30"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="18"/>
                                 <state key="normal" title="ランキング"/>
                                 <connections>
@@ -155,10 +168,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fms-qw-tI5">
-                                <rect key="frame" x="594.5" y="477.5" width="173.5" height="102.5"/>
+                                <rect key="frame" x="236" y="408.5" width="84" height="57"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-qz-c6h">
-                                <rect key="frame" x="736" y="992" width="22" height="22"/>
+                                <rect key="frame" x="288" y="536" width="22" height="22"/>
                                 <connections>
                                     <segue destination="thB-en-FQO" kind="show" id="nFI-89-JfQ"/>
                                 </connections>
@@ -214,47 +227,65 @@
             <objects>
                 <viewController id="8C3-NF-ykK" customClass="SecondViewController" customModule="名字さん" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GXP-vV-Z1f">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coming soon..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spn-cK-WeX">
-                                <rect key="frame" x="322" y="503.5" width="124" height="17"/>
-                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMf-2U-2Uo" customClass="AMJpnMapDetailView" customModule="AMJpnMap">
+                                <rect key="frame" x="0.0" y="176" width="320" height="284"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cop-Od-ydg">
-                                <rect key="frame" x="367.5" y="574" width="33" height="29"/>
+                                <rect key="frame" x="143.5" y="478" width="33" height="29"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="back:" destination="8C3-NF-ykK" eventType="touchUpInside" id="uVs-4A-I5B"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="スクリーンショット 2018-07-15 9.51.46.png" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-Sn-U6Y">
+                                <rect key="frame" x="16" y="110" width="96" height="170.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXD-f9-3zF">
+                                <rect key="frame" x="136" y="79" width="48.5" height="17"/>
+                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Spn-cK-WeX" firstAttribute="centerX" secondItem="GXP-vV-Z1f" secondAttribute="centerX" id="O5O-gl-9Ex"/>
-                            <constraint firstItem="Cop-Od-ydg" firstAttribute="centerX" secondItem="GXP-vV-Z1f" secondAttribute="centerX" id="Zb4-xi-c0v"/>
-                            <constraint firstItem="Spn-cK-WeX" firstAttribute="centerY" secondItem="GXP-vV-Z1f" secondAttribute="centerY" id="bfs-HB-Ytn"/>
-                            <constraint firstItem="Cop-Od-ydg" firstAttribute="top" secondItem="Spn-cK-WeX" secondAttribute="bottom" constant="53.329999999999998" id="wlN-5t-35w"/>
+                            <constraint firstItem="FMf-2U-2Uo" firstAttribute="height" secondItem="GXP-vV-Z1f" secondAttribute="height" multiplier="0.5" id="1Hq-DS-wlA"/>
+                            <constraint firstItem="cMk-Sn-U6Y" firstAttribute="leading" secondItem="3ZS-0A-CrO" secondAttribute="leading" constant="16" id="2Ct-8b-3ow"/>
+                            <constraint firstItem="FMf-2U-2Uo" firstAttribute="trailing" secondItem="3ZS-0A-CrO" secondAttribute="trailing" id="2U5-wL-waH"/>
+                            <constraint firstItem="Cop-Od-ydg" firstAttribute="top" secondItem="FMf-2U-2Uo" secondAttribute="bottom" constant="18" id="I6C-hV-4LF"/>
+                            <constraint firstItem="cMk-Sn-U6Y" firstAttribute="top" secondItem="3ZS-0A-CrO" secondAttribute="top" constant="90" id="IEz-YJ-TkZ"/>
+                            <constraint firstItem="QXD-f9-3zF" firstAttribute="top" secondItem="3ZS-0A-CrO" secondAttribute="top" constant="59" id="QLe-oh-Xh8"/>
+                            <constraint firstItem="FMf-2U-2Uo" firstAttribute="top" secondItem="QXD-f9-3zF" secondAttribute="bottom" constant="80" id="T8I-YQ-drQ"/>
+                            <constraint firstItem="FMf-2U-2Uo" firstAttribute="leading" secondItem="3ZS-0A-CrO" secondAttribute="leading" id="XnM-cS-vVs"/>
+                            <constraint firstItem="Cop-Od-ydg" firstAttribute="centerX" secondItem="GXP-vV-Z1f" secondAttribute="centerX" id="ap8-xu-YKy"/>
+                            <constraint firstItem="QXD-f9-3zF" firstAttribute="centerX" secondItem="GXP-vV-Z1f" secondAttribute="centerX" id="bHG-Tb-88Z"/>
+                            <constraint firstItem="cMk-Sn-U6Y" firstAttribute="width" secondItem="GXP-vV-Z1f" secondAttribute="width" multiplier="0.3" id="jHH-G6-YsF"/>
+                            <constraint firstItem="cMk-Sn-U6Y" firstAttribute="height" secondItem="GXP-vV-Z1f" secondAttribute="height" multiplier="0.3" id="r0u-V4-foe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3ZS-0A-CrO"/>
                     </view>
+                    <connections>
+                        <outlet property="detailView" destination="FMf-2U-2Uo" id="LOf-LM-aah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWY-BZ-Yjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1499" y="133"/>
+            <point key="canvasLocation" x="1496.25" y="130.98591549295776"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="48L-HG-6W2">
             <objects>
                 <viewController id="CNt-Tl-9ii" customClass="ThirdViewController" customModule="名字さん" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BfY-MN-bD0">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf9-eO-SJh">
-                                <rect key="frame" x="731" y="20" width="37" height="84"/>
+                                <rect key="frame" x="283" y="20" width="37" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="×"/>
                                 <connections>
@@ -262,14 +293,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E4T-PS-ScV">
-                                <rect key="frame" x="0.0" y="110" width="768" height="914"/>
+                                <rect key="frame" x="0.0" y="110" width="320" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SampleCell" id="Cbm-eF-gUP">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SampleCell" id="Cbm-eF-gUP">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cbm-eF-gUP" id="j9w-4R-pPC">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -297,18 +328,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGm-oo-POK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="854"/>
+            <point key="canvasLocation" x="2057" y="877"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="fCa-2i-EPp">
             <objects>
                 <viewController id="thB-en-FQO" customClass="infoViewController" customModule="名字さん" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JAU-Xq-Ktf">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0r-3I-TkB">
-                                <rect key="frame" x="727" y="30" width="31" height="72"/>
+                                <rect key="frame" x="279" y="30" width="31" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="×"/>
                                 <connections>
@@ -316,37 +347,37 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遊び方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diE-dg-pRg">
-                                <rect key="frame" x="351" y="100" width="66" height="22"/>
+                                <rect key="frame" x="127" y="100" width="66" height="22"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黄色いキャラクターをタップしまくるだけ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIe-go-r5c">
-                                <rect key="frame" x="257.5" y="177" width="253" height="15"/>
+                                <rect key="frame" x="34" y="177" width="252.5" height="15"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本の暇な名字ランキングが見れるよ！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5S-j9-m5W">
-                                <rect key="frame" x="250" y="247" width="268" height="16"/>
+                                <rect key="frame" x="26.5" y="247" width="267.5" height="16"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＊タップ回数、ランキングは月ごとにリセットされます。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y0-W4-Ir3">
-                                <rect key="frame" x="226" y="424" width="316" height="14"/>
+                                <rect key="frame" x="2" y="424" width="316" height="14"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="県別のランキングも今後実装予定!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY5-Jr-A7s">
-                                <rect key="frame" x="266" y="318" width="236" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="県別のランキングも見れるよ!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY5-Jr-A7s">
+                                <rect key="frame" x="59.5" y="318" width="201.5" height="16"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＊登録した名字は、月が変わるまで変更できません。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijD-5W-SYH">
-                                <rect key="frame" x="229.5" y="459" width="309" height="14"/>
+                                <rect key="frame" x="6" y="459" width="308.5" height="14"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -379,6 +410,7 @@
     </scenes>
     <resources>
         <image name="share.png" width="944" height="650"/>
+        <image name="スクリーンショット 2018-07-15 9.51.46.png" width="342" height="732"/>
         <image name="名字くん.png" width="447" height="453"/>
         <image name="吹き出し.png" width="199" height="164"/>
     </resources>
