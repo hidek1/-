@@ -90,9 +90,6 @@ class mainViewController: UIViewController {
         }
         self.counter = 0
         let db = Firestore.firestore()
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
         db.collection("users\(self.sDate)").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
