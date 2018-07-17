@@ -11,6 +11,7 @@ import UIKit
 class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var dayLabel: UILabel!
     
     var himaName:[(key:String, value: Int)] = []
     override func viewDidLoad() {
@@ -22,6 +23,11 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         bg.backgroundColor = UIColor.white
         self.view.addSubview(bg)
         TableView.backgroundColor = .clear
+        let date:Date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "yyyy年MM月"
+        let tDate = format.string(from: date)
+        dayLabel.text = tDate
 
         // Do any additional setup after loading the view.
     }

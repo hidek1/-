@@ -18,6 +18,7 @@ class SecondViewController: UIViewController {
     var ary2:[[[String:Any]]] = []
     var himaName:[[(key:String, value: Int)]] = []
     var rank: [Int] = []
+    @IBOutlet weak var dayLabel: UILabel!
     var userName:String = ""
     var rankcolor:[UIColor] = []
     var todouhuken = ["北海道","青森県","岩手県","秋田県","宮城県","山形県","福島県",
@@ -34,6 +35,9 @@ class SecondViewController: UIViewController {
         let format = DateFormatter()
         format.dateFormat = "yyyy_MM"
         sDate = format.string(from: date)
+        format.dateFormat = "yyyy年MM月"
+        let tDate = format.string(from: date)
+        dayLabel.text = tDate
         let db = Firestore.firestore()
         db.collection("users\(self.sDate)").getDocuments() { (querySnapshot, err) in
             if let err = err {

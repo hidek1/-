@@ -247,7 +247,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXD-f9-3zF">
                                 <rect key="frame" x="136" y="79" width="48.5" height="17"/>
-                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -258,8 +258,8 @@
                             <constraint firstItem="FMf-2U-2Uo" firstAttribute="trailing" secondItem="3ZS-0A-CrO" secondAttribute="trailing" id="2U5-wL-waH"/>
                             <constraint firstItem="Cop-Od-ydg" firstAttribute="top" secondItem="FMf-2U-2Uo" secondAttribute="bottom" constant="18" id="I6C-hV-4LF"/>
                             <constraint firstItem="cMk-Sn-U6Y" firstAttribute="top" secondItem="3ZS-0A-CrO" secondAttribute="top" constant="90" id="IEz-YJ-TkZ"/>
-                            <constraint firstItem="QXD-f9-3zF" firstAttribute="top" secondItem="3ZS-0A-CrO" secondAttribute="top" constant="59" id="QLe-oh-Xh8"/>
-                            <constraint firstItem="FMf-2U-2Uo" firstAttribute="top" secondItem="QXD-f9-3zF" secondAttribute="bottom" constant="80" id="T8I-YQ-drQ"/>
+                            <constraint firstItem="QXD-f9-3zF" firstAttribute="top" secondItem="3ZS-0A-CrO" secondAttribute="top" constant="30" id="QLe-oh-Xh8"/>
+                            <constraint firstItem="FMf-2U-2Uo" firstAttribute="top" secondItem="QXD-f9-3zF" secondAttribute="bottom" constant="100" id="T8I-YQ-drQ"/>
                             <constraint firstItem="FMf-2U-2Uo" firstAttribute="leading" secondItem="3ZS-0A-CrO" secondAttribute="leading" id="XnM-cS-vVs"/>
                             <constraint firstItem="Cop-Od-ydg" firstAttribute="centerX" secondItem="GXP-vV-Z1f" secondAttribute="centerX" id="ap8-xu-YKy"/>
                             <constraint firstItem="QXD-f9-3zF" firstAttribute="centerX" secondItem="GXP-vV-Z1f" secondAttribute="centerX" id="bHG-Tb-88Z"/>
@@ -269,6 +269,7 @@
                         <viewLayoutGuide key="safeArea" id="3ZS-0A-CrO"/>
                     </view>
                     <connections>
+                        <outlet property="dayLabel" destination="QXD-f9-3zF" id="0Pc-S6-ZMB"/>
                         <outlet property="detailView" destination="FMf-2U-2Uo" id="LOf-LM-aah"/>
                     </connections>
                 </viewController>
@@ -310,20 +311,29 @@
                                     <outlet property="delegate" destination="CNt-Tl-9ii" id="VOC-Rn-f3p"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pB3-GR-EpB">
+                                <rect key="frame" x="126" y="50" width="69" height="24"/>
+                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cf9-eO-SJh" firstAttribute="trailing" secondItem="ZRg-j0-cwj" secondAttribute="trailing" id="2Xx-SA-n4w"/>
                             <constraint firstItem="E4T-PS-ScV" firstAttribute="leading" secondItem="ZRg-j0-cwj" secondAttribute="leading" id="DUf-ZA-bA8"/>
+                            <constraint firstItem="pB3-GR-EpB" firstAttribute="top" secondItem="ZRg-j0-cwj" secondAttribute="top" constant="30" id="Kl7-k3-hjS"/>
                             <constraint firstItem="E4T-PS-ScV" firstAttribute="trailing" secondItem="ZRg-j0-cwj" secondAttribute="trailing" id="Oma-dN-b0x"/>
                             <constraint firstItem="E4T-PS-ScV" firstAttribute="top" secondItem="Cf9-eO-SJh" secondAttribute="bottom" constant="6" id="S1o-sm-U0g"/>
                             <constraint firstItem="ZRg-j0-cwj" firstAttribute="bottom" secondItem="E4T-PS-ScV" secondAttribute="bottom" id="dkV-T0-PuM"/>
+                            <constraint firstItem="pB3-GR-EpB" firstAttribute="centerX" secondItem="BfY-MN-bD0" secondAttribute="centerX" id="icr-sh-hAO"/>
                             <constraint firstItem="Cf9-eO-SJh" firstAttribute="top" secondItem="ZRg-j0-cwj" secondAttribute="top" id="j78-79-Lv7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZRg-j0-cwj"/>
                     </view>
                     <connections>
                         <outlet property="TableView" destination="E4T-PS-ScV" id="hPt-pk-wFv"/>
+                        <outlet property="dayLabel" destination="pB3-GR-EpB" id="uln-JT-22X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGm-oo-POK" userLabel="First Responder" sceneMemberID="firstResponder"/>
