@@ -10,7 +10,7 @@ import UIKit
 import AMJpnMap
 import Firebase
 import FirebaseFirestore
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController ,UIGestureRecognizerDelegate {
     @IBOutlet weak var detailView: AMJpnMapDetailView!
     let userDefaults = UserDefaults.standard
     var sDate:String = ""
@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var dayLabel: UILabel!
     var userName:String = ""
     var rankcolor:[UIColor] = []
+    var tapPoint = CGPoint(x: 0, y: 0)
     var todouhuken = ["北海道","青森県","岩手県","秋田県","宮城県","山形県","福島県",
                       "茨城県","千葉県","栃木県","群馬県","埼玉県","東京都","神奈川県",
                       "新潟県","長野県","山梨県","静岡県","愛知県","三重県","岐阜県",
@@ -30,6 +31,14 @@ class SecondViewController: UIViewController {
                       "鹿児島県","熊本県","佐賀県","長崎県","沖縄県","海外"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(self.tapped(_:)))
+
+        // デリゲートをセット
+        tapGesture.delegate = self
+        
+        self.detailView.addGestureRecognizer(tapGesture)
         userName = userDefaults.object(forKey: "name") as! String
         let date:Date = Date()
         let format = DateFormatter()
@@ -99,7 +108,13 @@ class SecondViewController: UIViewController {
         self.view.addSubview(bg)
         // Do any additional setup after loading the view.
     }
-    
+    @objc func tapped(_ sender: UITapGestureRecognizer){
+        //ImageView上のタップ座標を取得
+        tapPoint = sender.location(in: detailView)
+        if sender.state == .ended {
+            print(tapPoint)
+        }
+    }
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -112,7 +127,6 @@ class SecondViewController: UIViewController {
         super.viewDidAppear(animated)
 
     }
-    
     func setcolor() {
         detailView.setFillColor(color: rankcolor[0], prefecture: .hokkaido)
         detailView.setFillColor(color: rankcolor[1], prefecture: .aomori)
