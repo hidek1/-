@@ -9,6 +9,7 @@ target '名字さん' do
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'AMJpnMap'
+pod 'SwiftGifOrigin', '~> 1.6.1'
   target '名字さんTests' do
     inherit! :search_paths
     # Pods for testing

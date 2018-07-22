@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import AVFoundation
+import SwiftGifOrigin
 
 class mainViewController: UIViewController {
     @IBOutlet weak var Label1: UILabel!
@@ -17,6 +18,8 @@ class mainViewController: UIViewController {
     @IBOutlet weak var Label3: UILabel!
     @IBOutlet weak var Label4: UILabel!
     @IBOutlet weak var TapButton: UIButton!
+
+    @IBOutlet weak var birdView: UIImageView!
     
     @IBOutlet weak var share: UIImageView!
     @IBOutlet weak var coment: UILabel!
@@ -34,6 +37,9 @@ class mainViewController: UIViewController {
     var sDate:String = ""
     var himaName:[(key:String, value: Int)] = []
     var audioPlayerInstance : AVAudioPlayer! = nil  // 再生するサウンドのインスタンス
+    let birdb = UIImage.gif(name: "birdfb")
+    let birdo = UIImage.gif(name: "birdfo")
+    var random = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +74,9 @@ class mainViewController: UIViewController {
                 target: self,
                 action: #selector(self.tapped(sender:)))
         )
+        
+        
+        birdView.image = birdb
         //現在の日付を取得
         let date:Date = Date()
         let format = DateFormatter()
@@ -167,9 +176,39 @@ class mainViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    func animateImage(target:UIImageView){
+        // 画面1pt進むのにかかる時間の計算
+        let timePerSecond = 30.0 / view.bounds.size.width
+        
+        // 画像の位置から画面右までにかかる時間の計算
+        let remainTime = (view.bounds.size.width - target.frame.origin.x) * timePerSecond
+        
+        // アニメーション
+        UIView.transition(with: target, duration: TimeInterval( remainTime), options: .curveLinear, animations: { () -> Void in
+            
+            // 画面右まで移動
+            target.frame.origin.x = self.view.bounds.width
+            
+        }, completion: { _ in
+            
+            // 画面右まで行ったら、画面左に戻す
+            target.frame.origin.x = -target.bounds.size.width
+            let birds = [self.birdb, self.birdo]
+            self.random = Int(arc4random_uniform(UInt32(birds.count)))
+            self.birdView.image = birds[self.random]
+            // 再度アニメーションを起動
+            self.animateImage(target: target)
+        })
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let birds = [self.birdb, self.birdo]
+        self.random = Int(arc4random_uniform(UInt32(birds.count)))
+        self.birdView.image = birds[self.random]
+        animateImage(target: birdView)
     }
     override func viewDidAppear(_ animated: Bool) {
         if userDefaults.object(forKey: "date") as! String != sDate {
@@ -193,6 +232,7 @@ class mainViewController: UIViewController {
         // 連打した時に連続して音がなるようにする
         audioPlayerInstance.currentTime = 0         // 再生位置を先頭(0)に戻してから
         audioPlayerInstance.play()                  // 再生する
+        self.vibrate(amount: 5.0 ,view: self.TapButton)
         count = count + 1
         Label4.text = "あなたのスコア \(count)"
         userDefaults.set(count, forKey: "count")
@@ -215,6 +255,21 @@ class mainViewController: UIViewController {
 //        print(sDate)
         if userDefaults.object(forKey: "date") as! String != sDate {
             self.dismiss(animated: true, completion: nil)
+        }
+    }
+    func vibrate(amount: Float ,view: UIView) {
+        if amount > 0 {
+            var animation: CABasicAnimation
+            animation = CABasicAnimation(keyPath: "transform.rotation")
+            animation.duration = 0.15
+            animation.fromValue = amount * Float(M_PI) / 180.0
+            animation.toValue = 0 - (animation.fromValue as! Float)
+            animation.repeatCount = 1.0
+            animation.autoreverses = true
+            view.layer .add(animation, forKey: "VibrateAnimationKey")
+        }
+        else {
+            view.layer.removeAnimation(forKey: "VibrateAnimationKey")
         }
     }
     

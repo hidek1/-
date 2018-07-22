@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import AMJpnMap
+//import AMJpnMap
 import Firebase
 import FirebaseFirestore
-class SecondViewController: UIViewController ,UIGestureRecognizerDelegate {
+class SecondViewController: UIViewController ,AMJpnMapViewDetailDelegate {
     @IBOutlet weak var detailView: AMJpnMapDetailView!
     let userDefaults = UserDefaults.standard
     var sDate:String = ""
@@ -22,23 +22,17 @@ class SecondViewController: UIViewController ,UIGestureRecognizerDelegate {
     var userName:String = ""
     var rankcolor:[UIColor] = []
     var tapPoint = CGPoint(x: 0, y: 0)
+    var sendNumber:Int = 0
     var todouhuken = ["北海道","青森県","岩手県","秋田県","宮城県","山形県","福島県",
                       "茨城県","千葉県","栃木県","群馬県","埼玉県","東京都","神奈川県",
                       "新潟県","長野県","山梨県","静岡県","愛知県","三重県","岐阜県",
                       "福井県","石川県","富山県","滋賀県","京都府","兵庫県","奈良県",
                       "和歌山県","大阪府","鳥取県","岡山県","広島県","山口県","島根県",
                       "香川県","徳島県","高知県","愛媛県","福岡県","大分県","宮崎県",
-                      "鹿児島県","熊本県","佐賀県","長崎県","沖縄県","海外"]
+                      "鹿児島県","熊本県","佐賀県","長崎県","沖縄県"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(self.tapped(_:)))
-
-        // デリゲートをセット
-        tapGesture.delegate = self
-        
-        self.detailView.addGestureRecognizer(tapGesture)
+        detailView.delegate = self
         userName = userDefaults.object(forKey: "name") as! String
         let date:Date = Date()
         let format = DateFormatter()
@@ -53,7 +47,6 @@ class SecondViewController: UIViewController ,UIGestureRecognizerDelegate {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
                     self.ary.append(document.data())
                 }
                 print(self.ary)
@@ -71,7 +64,7 @@ class SecondViewController: UIViewController ,UIGestureRecognizerDelegate {
                             return newResult
                         }
                         .sorted() { $0.value > $1.value })
-//                    print(self.himaName[i].map{ $0.key}.index(of: self.userName))
+                    print(self.himaName[i])
                     let abc = self.himaName[i].map{ $0.key}.index(of: self.userName)
                     if abc != nil {
                         self.rank.append(self.himaName[i].map{ $0.key}.index(of: self.userName)! + 1)
@@ -108,13 +101,6 @@ class SecondViewController: UIViewController ,UIGestureRecognizerDelegate {
         self.view.addSubview(bg)
         // Do any additional setup after loading the view.
     }
-    @objc func tapped(_ sender: UITapGestureRecognizer){
-        //ImageView上のタップ座標を取得
-        tapPoint = sender.location(in: detailView)
-        if sender.state == .ended {
-            print(tapPoint)
-        }
-    }
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -123,9 +109,30 @@ class SecondViewController: UIViewController ,UIGestureRecognizerDelegate {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidAppear(_ animated: Bool) {
-        
         super.viewDidAppear(animated)
 
+    }
+    func jpnMapDetailView(jpnMapDetailView: AMJpnMapDetailView, didSelectAtRegion region: AMJMPrefecture, number: Int) {
+//        jpnMapDetailView.setStrokeColor(color: UIColor.black, prefecture: region)
+//        jpnMapDetailView.setScale(scale: 3.0, region: region)
+        sendNumber = number
+        self.performSegue(withIdentifier: "toNext", sender: nil)
+    }
+    func jpnMapDetailView(jpnMapDetailView: AMJpnMapDetailView, didDeselectAtRegion region: AMJMPrefecture) {
+//        jpnMapDetailView.setStrokeColor(color: UIColor.green, prefecture: region)
+//        jpnMapDetailView.setScale(scale: 1.0, region: region)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {
+            // identifierが取れなかったら処理やめる
+            return
+        }
+        
+        if(identifier == "toNext") {
+            let subVC:PrefViewController = segue.destination as! PrefViewController
+            subVC.pref = self.todouhuken[sendNumber]
+            subVC.ranking = self.himaName[sendNumber]
+        }
     }
     func setcolor() {
         detailView.setFillColor(color: rankcolor[0], prefecture: .hokkaido)

@@ -67,11 +67,13 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.6.0)
+  - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
   - AMJpnMap
   - Firebase/Core
   - Firebase/Firestore
+  - SwiftGifOrigin (~> 1.6.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -90,6 +92,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   AMJpnMap: 5c4b0da99ce138be7956c4b6e420bb7307fc1a00
@@ -107,7 +110,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: af9f8c0b2b4161ea9d8234438847aab4239f921b
+PODFILE CHECKSUM: b9d6dad1798253bf5d19336cb080248ca2488075
 
 COCOAPODS: 1.5.3

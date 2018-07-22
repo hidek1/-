@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUe-FS-TgC">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,6 +17,64 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Lc View Controller-->
+        <scene sceneID="Fje-mq-GbC">
+            <objects>
+                <viewController id="EUe-FS-TgC" customClass="LcViewController" customModule="名字さん" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EQV-70-0Y1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky.png" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-mk-OJ1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="名字くん.png" translatesAutoresizingMaskIntoConstraints="NO" id="m8s-Qa-ZBi">
+                                <rect key="frame" x="35" y="164" width="250" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="6d1-ot-EJT"/>
+                                    <constraint firstAttribute="height" constant="240" id="jqw-3X-c5a"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img03.gif" translatesAutoresizingMaskIntoConstraints="NO" id="0OO-uh-xDs">
+                                <rect key="frame" x="172" y="136" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Ost-ai-CnZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="tLV-8N-t2r"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字さん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA5-3A-JDs">
+                                <rect key="frame" x="77.5" y="85" width="165" height="43"/>
+                                <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cvg-mk-OJ1" firstAttribute="top" secondItem="EQV-70-0Y1" secondAttribute="top" id="2tP-a9-sgm"/>
+                            <constraint firstItem="cvg-mk-OJ1" firstAttribute="trailing" secondItem="ydJ-A9-Huf" secondAttribute="trailing" id="EKe-6v-weL"/>
+                            <constraint firstItem="m8s-Qa-ZBi" firstAttribute="centerY" secondItem="EQV-70-0Y1" secondAttribute="centerY" id="GeW-hA-ls9"/>
+                            <constraint firstItem="cvg-mk-OJ1" firstAttribute="bottom" secondItem="ydJ-A9-Huf" secondAttribute="bottom" id="KOH-em-nmB"/>
+                            <constraint firstItem="0OO-uh-xDs" firstAttribute="top" secondItem="bA5-3A-JDs" secondAttribute="bottom" constant="8" id="NGy-c6-6Xf"/>
+                            <constraint firstItem="ydJ-A9-Huf" firstAttribute="centerY" secondItem="0OO-uh-xDs" secondAttribute="bottom" constant="78" id="Q2s-Vn-CIY"/>
+                            <constraint firstItem="cvg-mk-OJ1" firstAttribute="leading" secondItem="ydJ-A9-Huf" secondAttribute="leading" id="Q5m-KD-1ph"/>
+                            <constraint firstItem="bA5-3A-JDs" firstAttribute="centerX" secondItem="EQV-70-0Y1" secondAttribute="centerX" id="VvT-bx-tGH"/>
+                            <constraint firstItem="m8s-Qa-ZBi" firstAttribute="centerX" secondItem="EQV-70-0Y1" secondAttribute="centerX" id="oF9-4u-ydR"/>
+                            <constraint firstItem="0OO-uh-xDs" firstAttribute="leading" secondItem="ydJ-A9-Huf" secondAttribute="centerX" constant="12" id="sTN-TQ-vEW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ydJ-A9-Huf"/>
+                    </view>
+                    <connections>
+                        <outlet property="bird" destination="0OO-uh-xDs" id="GpN-Em-Guw"/>
+                        <outlet property="logoImageView" destination="m8s-Qa-ZBi" id="zRQ-tE-wra"/>
+                        <outlet property="tLabel" destination="bA5-3A-JDs" id="Q49-YW-y93"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="start" id="nNW-pu-9oP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnM-1z-2I2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.375" y="130.98591549295776"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -176,6 +234,10 @@
                                     <segue destination="thB-en-FQO" kind="show" id="nFI-89-JfQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ku5-eN-Yyk">
+                                <rect key="frame" x="0.0" y="175" width="78" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="dIa-qV-Cap" firstAttribute="top" secondItem="1Aj-Ac-uyN" secondAttribute="bottom" constant="3" id="0Oq-MZ-xrf"/>
@@ -213,6 +275,7 @@
                         <outlet property="Label3" destination="wjv-4i-TM2" id="gWU-5b-uoW"/>
                         <outlet property="Label4" destination="1Aj-Ac-uyN" id="8dD-Rj-d7E"/>
                         <outlet property="TapButton" destination="zgq-jt-S0J" id="OHS-KQ-yTM"/>
+                        <outlet property="birdView" destination="ku5-eN-Yyk" id="tUb-bl-7gl"/>
                         <outlet property="coment" destination="dIa-qV-Cap" id="VmR-rp-nI9"/>
                         <outlet property="share" destination="Fms-qw-tI5" id="Osb-C7-49L"/>
                         <segue destination="CNt-Tl-9ii" kind="presentation" identifier="next" id="OEI-xt-9bl"/>
@@ -230,12 +293,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMf-2U-2Uo" customClass="AMJpnMapDetailView" customModule="AMJpnMap">
-                                <rect key="frame" x="0.0" y="174" width="320" height="284"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMf-2U-2Uo" customClass="AMJpnMapDetailView" customModule="名字さん" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="178" width="320" height="284"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slr-uj-exV">
+                                        <rect key="frame" x="65" y="248" width="191" height="28"/>
+                                        <string key="text" base64-UTF8="YES">
+55yM44KS44K/44OD44OX44GZ44KL44GoERERERERERERERERERERERERERERERERERHigKjjgZ3jga7n
+nIzjga7jg6njg7Pjgq3jg7PjgrDjgYzopovjgozjgovjgojvvIE
+</string>
+                                        <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="slr-uj-exV" firstAttribute="centerX" secondItem="FMf-2U-2Uo" secondAttribute="centerX" id="jna-Lb-7Lh"/>
+                                    <constraint firstAttribute="bottom" secondItem="slr-uj-exV" secondAttribute="bottom" constant="8" id="pzC-Hr-Weg"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cop-Od-ydg">
-                                <rect key="frame" x="143.5" y="476" width="33" height="29"/>
+                                <rect key="frame" x="143" y="480" width="34" height="32"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="17"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
@@ -246,7 +325,7 @@
                                 <rect key="frame" x="16" y="110" width="96" height="170.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXD-f9-3zF">
-                                <rect key="frame" x="126" y="50" width="68.5" height="24"/>
+                                <rect key="frame" x="131" y="50" width="59" height="28"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -271,7 +350,7 @@
                     <connections>
                         <outlet property="dayLabel" destination="QXD-f9-3zF" id="0Pc-S6-ZMB"/>
                         <outlet property="detailView" destination="FMf-2U-2Uo" id="LOf-LM-aah"/>
-                        <segue destination="yIo-de-jb8" kind="presentation" identifier="next" id="3Fc-4x-etF"/>
+                        <segue destination="yIo-de-jb8" kind="presentation" identifier="toNext" id="3dP-Kf-vQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWY-BZ-Yjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -426,10 +505,10 @@
             </objects>
             <point key="canvasLocation" x="1488.75" y="1567.605633802817"/>
         </scene>
-        <!--View Controller-->
+        <!--Pref View Controller-->
         <scene sceneID="g65-6s-YsU">
             <objects>
-                <viewController id="yIo-de-jb8" customClass="PViewController" sceneMemberID="viewController">
+                <viewController id="yIo-de-jb8" customClass="PrefViewController" customModule="名字さん" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FEP-rk-0uc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -439,27 +518,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="×"/>
                                 <connections>
-                                    <action selector="backButton:" destination="yIo-de-jb8" eventType="touchUpInside" id="QfW-DL-ter"/>
+                                    <action selector="backButton:" destination="yIo-de-jb8" eventType="touchUpInside" id="Dya-MZ-sEG"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-Ri-fOJ">
-                                <rect key="frame" x="0.0" y="110" width="320" height="458"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SampleCell" id="a00-k9-iJg">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a00-k9-iJg" id="8Jc-eg-vff">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="yIo-de-jb8" id="fLL-jM-SDI"/>
-                                    <outlet property="delegate" destination="yIo-de-jb8" id="aXQ-hv-A22"/>
-                                </connections>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0c-gH-ays">
                                 <rect key="frame" x="131.5" y="76" width="57" height="20"/>
                                 <fontDescription key="fontDescription" name="takumi-yutorifont-P" family="takumi-yutorifont-P" pointSize="20"/>
@@ -472,6 +533,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-Ri-fOJ">
+                                <rect key="frame" x="0.0" y="110" width="320" height="458"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="a00-k9-iJg">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a00-k9-iJg" id="8Jc-eg-vff">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -489,8 +564,9 @@
                         <viewLayoutGuide key="safeArea" id="848-fb-wW1"/>
                     </view>
                     <connections>
-                        <outlet property="TableView" destination="zlE-Ri-fOJ" id="UVP-bG-PmK"/>
-                        <outlet property="dayLabel" destination="B0c-gH-ays" id="7QF-6j-iSV"/>
+                        <outlet property="TableView" destination="zlE-Ri-fOJ" id="umu-jA-Imi"/>
+                        <outlet property="dayLabel" destination="B0c-gH-ays" id="0Zj-Ep-q0W"/>
+                        <outlet property="prefLabel" destination="o85-CU-YQh" id="L7d-Mb-kRl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sy3-22-SxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -499,7 +575,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="img03.gif" width="253" height="235"/>
         <image name="share.png" width="944" height="650"/>
+        <image name="sky.png" width="793" height="1025"/>
         <image name="スクリーンショット 2018-07-15 9.51.46.png" width="342" height="732"/>
         <image name="名字くん.png" width="447" height="453"/>
         <image name="吹き出し.png" width="199" height="164"/>
